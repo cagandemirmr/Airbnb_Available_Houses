@@ -26,28 +26,28 @@ WHERE a.host_is_superhost IS NOT NULL
   AND b.first_review IS NOT NULL;
 ```
 
-### **Python Operations**
-1. Removed unrealistic data for dates beyond December 2024:
+### Python Operations
+- Filtered out unrealistic future data by removing rows with dates beyond December 2024.
 ```python
-df = df[df['date'] < pd.Timestamp('2025-01-01')]
+# Removing data after December 2024
+filtered_data = df[df['date'] < pd.Timestamp('2025-01-01')]
 ```
-2. Filtered to include only available houses in Istanbul, reducing rows from 1,346,000 to 939,000.
+- Used Python to manage large datasets that exceeded Tableau's row limitations, efficiently reducing the size of datasets for visualization.
 
-## **Dashboard Design**
-The final Tableau dashboard includes:
-1. **Bar Charts**:
-   - To analyze key attributes like room types and superhost statuses.
-2. **Line Graph**:
-   - To show trends over time.
-3. **Table**:
-   - To display the availability of bedrooms.
+---
 
-## **Challenges**
-1. Tableau's row limit required preprocessing in SQL and Python to ensure the dataset was manageable.
-2. Python proved more efficient than SQL for handling large datasets and reducing memory usage.
-3. Filtering null values and unnecessary data significantly reduced the dataset size while retaining relevant information.
-
-## **Final Dashboard**
-The final visualization can be accessed via [Tableau Public](https://public.tableau.com/shared/2DRMD8QB8?:display_count=n&:origin=viz_share_link).
+## Visualization Tools
+### Tableau
+- Created bar charts, line graphs, and tables to visualize available bedrooms and trends over time.
+- Adjusted data types to `Dimension` in Tableau for specific visualizations, which highlighted Tableau's limitations compared to Power BI in handling certain functionalities.
+- Example Dashboard: [Tableau Public Dashboard](https://public.tableau.com/shared/2DRMD8QB8?:display_count=n&:origin=viz_share_link)
 ![image](https://github.com/user-attachments/assets/24d1f358-b2a2-4f6a-a6bd-71a866eb1707)
+
+---
+
+## Conclusion
+- SQL and Python were instrumental in cleaning and processing data due to their efficiency in handling large datasets.
+- Visualization tools like Tableau and Power BI complemented the process by providing advanced graphical representations. Power BI was preferred for its advanced features and ease of use in visualizing complex datasets.
+
+
 
