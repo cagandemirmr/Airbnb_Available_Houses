@@ -49,3 +49,5 @@ The final Tableau dashboard includes:
 
 ## **Final Dashboard**
 The final visualization can be accessed via [Tableau Public](https://public.tableau.com/shared/2DRMD8QB8?:display_count=n&:origin=viz_share_link).
+![image](https://github.com/user-attachments/assets/24d1f358-b2a2-4f6a-a6bd-71a866eb1707)
+
